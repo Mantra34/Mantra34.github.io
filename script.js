@@ -1,6 +1,6 @@
 /* ==CONFIGURACIÓN */
-const CLICKS_BEFORE_SPECIAL = 20;   // a partir de este número de clicks...
-const SPECIAL_CHANCE = 0.05;        // ...esta es la probabilidad (5%) en cada click
+const CLICKS_BEFORE_SPECIAL = 15;   // a partir de este número de clicks...
+const SPECIAL_CHANCE = 0.13;        // ...esta es la probabilidad (5%) en cada click
 
 const STORAGE_KEY = "lovePage.clickCount";
 
