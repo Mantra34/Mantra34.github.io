@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Teclado 💌</title>
+  <link rel="icon" type="image/x-icon" href="corazon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       FONDO — mismas nubes que index.html (sección 3 de style.css)
+       ══════════════════════════════════════════════════ -->
+  <div class="sky" aria-hidden="true">
+    <div class="cloud cloud--1"></div>
+    <div class="cloud cloud--2"></div>
+    <div class="cloud cloud--3"></div>
+    <div class="cloud cloud--4"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       CORAZÓN DE TEXTO ANIMADO — dibujado por teclado.js
+       usando las frases de assets/messages.json
+       ══════════════════════════════════════════════════ -->
+  <canvas id="loveCanvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════════════════════════════
+       CONTENIDO — título, volver y formulario de nuevas frases
+       ══════════════════════════════════════════════════ -->
+  <main class="teclado-stage">
+    <a href="index.html" class="teclado-back">← Volver</a>
+
+    <p class="eyebrow">un corazón hecho de palabras</p>
+    <h1 class="title">Para ti</h1>
+
+    <form id="addWordForm" class="add-word-form">
+      <input
+        type="text"
+        id="addWordInput"
+        class="add-word-form__input"
+        placeholder="Escribe algo bonito para añadir..."
+        maxlength="80"
+        autocomplete="off"
+      />
+      <button type="submit" class="add-word-form__submit">Añadir</button>
+    </form>
+  </main>
+
+  <script src="teclado.js"></script>
+</body>
+</html>

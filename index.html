@@ -6,7 +6,6 @@
   <title>Para ti 💌</title>
   <link rel="icon" type="image/x-icon" href="corazon.ico" />
 
-
   <!-- Fuentes: una display romántica + una sans-serif suave para cuerpo -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,6 +59,28 @@
 
   <!-- Audio del evento especial: coloca tu archivo mp3 en assets/audio/cancion-especial.mp3 -->
   <audio id="specialAudio" src="assets/audio/cancion-especial.mp3" preload="none"></audio>
+
+  <!-- Dock lateral: botón que se abre hacia la izquierda -->
+  <div class="side-dock" id="sideDock">
+    <div class="side-dock__track-wrapper">
+      <div class="side-dock__track" id="dockTrack" role="list"></div>
+    </div>
+
+    <button
+      id="dockToggle"
+      class="side-dock__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="dockTrack"
+      aria-label="Abrir menú de sorpresas"
+    
+    >
+      <span class="side-dock__icon">❤️</span>
+    </button>
+  </div>
+
+  <!-- Toast para los íconos de sorpresa aún no disponibles -->
+  <div id="dockToast" class="dock-toast" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
