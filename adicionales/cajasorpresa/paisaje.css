@@ -1,0 +1,288 @@
+/* paisaje.css */
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.tree-scene {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 2vh;
+}
+
+/* 1. LA COPA (Z-index superior para cubrir la madera) */
+.tree-crown-wrapper {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; /* VITAL: Debe estar por encima del tronco */
+    margin-bottom: -18vh; /* Baja la copa verde directo sobre el café */
+    filter: drop-shadow(0 30px 40px rgba(23, 71, 6, 0.5));
+}
+
+.crown-svg {
+    width: 100%;
+    min-width: 1200px; 
+    height: auto;
+}
+
+.crown-ui {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    transform: translateY(-20px);
+}
+
+.floating-leaf {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 6;
+    opacity: 0.8;
+    animation: leaf-sway 4s ease-in-out infinite alternate;
+}
+
+.leaf-1 { top: 20%; left: 15%; animation-delay: 0s; }
+.leaf-2 { top: 40%; right: 10%; animation-delay: 1s; font-size: 1.5rem; }
+.leaf-3 { bottom: 45%; left: 25%; animation-delay: 2s; }
+.leaf-4 { bottom: 35%; right: 20%; animation-delay: 0.5s; font-size: 1.2rem; }
+
+@keyframes leaf-sway {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-25px) rotate(25deg); }
+}
+
+.gift-box {
+    background: radial-gradient(circle at 35% 30%, #fff, var(--pink) 55%, var(--pink-deep) 100%);
+    border: none;
+    border-radius: var(--radius-md);
+    width: clamp(130px, 20vw, 160px);
+    height: clamp(130px, 20vw, 160px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 0 10px rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2.5s infinite;
+    transition: transform 0.2s ease;
+}
+
+.gift-box:active { transform: scale(0.9); }
+.gift-box__icon { font-size: clamp(4rem, 8vw, 5rem); filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-8px); }
+}
+
+/* 2. EL TRONCO (Pasa directamente bajo las hojas) */
+.tree-trunk-wrapper {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2; /* VITAL: Por debajo de la copa */
+}
+
+.trunk-svg {
+    position: absolute;
+    top: 0;
+    width: clamp(350px, 50vw, 900px); 
+    height: 100%;
+    z-index: 1;
+}
+
+.trunk-text-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: clamp(280px, 35vw, 500px); 
+    padding: 300px 20px 250px; 
+    text-align: center;
+}
+
+.romantic-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem); 
+    line-height: 1.7;
+    color: var(--cream);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 5px 25px rgba(0,0,0,0.8);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* 3. FONDO Y RAÍCES */
+.ground-section {
+    width: 100vw;
+    background: linear-gradient(180deg, #1f6904 0%, #3d2314 20%, #2e180d 50%, #1c0e07 100%);
+    position: relative;
+    z-index: 5;
+    margin-top: -40px;
+    padding-bottom: 250px;
+}
+
+.grass-transition {
+    position: absolute;
+    top: -149px;
+    left: 0;
+    width: 100vw;
+    height: 150px;
+}
+
+.album-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 30px 40px;
+}
+
+.responsive-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    justify-items: center;
+    width: 100%;
+}
+
+.polaroid-item {
+    background: #fcfcfc;
+    /* Cambiamos el padding para que sea parejo, el texto dará el espacio abajo */
+    padding: 15px; 
+    box-shadow: 3px 10px 30px rgba(0,0,0,0.6);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 100%;
+    max-width: 360px;
+    
+    /* Agregamos Flexbox para que la foto y el texto se apilen ordenadamente */
+    display: flex;
+    flex-direction: column;
+}
+
+.polaroid-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: sepia(3%) contrast(105%);
+}
+
+/* Estilos para que el video encaje en la polaroid */
+.polaroid-item video {
+    width: 100%;
+    height: 280px; /* El mismo alto que las fotos */
+    object-fit: cover; /* Recorta los bordes para que encaje perfecto */
+    filter: sepia(3%) contrast(105%); /* Mantiene el filtro de color vintage */
+}
+
+/* Para que el video en grande no se salga de la pantalla */
+.polaroid-modal img, 
+.polaroid-modal video {
+    width: 100%;
+    height: auto; /* La clave maestra: obliga a respetar la proporción original */
+    max-height: 65vh; /* Evita que el collage sea más alto que la pantalla del celular */
+    object-fit: contain; /* Ajusta la imagen completa dentro del marco sin recortarla ni aplastarla */
+    border-radius: 2px !important;
+}
+
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 100px;
+    height: 30px;
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.7), rgba(255,255,255,0.7) 5px, rgba(220,220,220,0.7) 5px, rgba(220,220,220,0.7) 10px);
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.polaroid-text {
+    /* ELIMINAMOS position: absolute, bottom y left */
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #4a2021;
+    
+    /* Manejamos el espacio con márgenes naturales */
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+}
+
+@media (min-width: 769px) {
+    .polaroid-item:hover { transform: scale(1.1) rotate(0deg) !important; z-index: 10; box-shadow: 5px 15px 40px rgba(0,0,0,0.8); }
+    .polaroid-item:nth-child(odd) { transform: rotate(-3deg) translateY(20px); }
+    .polaroid-item:nth-child(even) { transform: rotate(4deg) translateY(-20px); }
+    .polaroid-item:nth-child(3n) { transform: rotate(1deg) translateY(10px); }
+}
+
+@media (max-width: 768px) {
+    .responsive-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .polaroid-item:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 10; }
+    .polaroid-item:nth-child(odd) { transform: translateX(-2%) rotate(-2deg); }
+    .polaroid-item:nth-child(even) { transform: translateX(2%) rotate(2deg); }
+}
+
+.polaroid-modal {
+    background: #fcfcfc;
+    padding: 15px 15px 75px 15px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    width: 90%;
+    max-width: 450px;
+}
+.polaroid-modal img { border-radius: 2px !important; }
+.polaroid-modal .special-card__close {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 24px;
+    left: 24px; /* Si lo quieres estrictamente a la derecha, cambia 'left' por 'right' y pon 'bottom: 85px' para que no tape la notificación */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    color: var(--plum);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-to-home:active {
+    transform: scale(0.95);
+}

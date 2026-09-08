@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Árbol</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="paisaje.css">
+    <link rel="icon" type="image/x-icon" href="../../hearth.ico" />
+
+</head>
+<a href="../../index.html" class="back-to-home">
+    <span>🏠 Volver</span>
+</a>
+<body>
+    <div class="sky">
+        <div class="cloud cloud--1"></div>
+        <div class="cloud cloud--2"></div>
+        <div class="cloud cloud--3"></div>
+    </div>
+
+    <div class="tree-scene">
+        
+        <!-- 1. LA COPA (Limpia en la base para superponerse perfecto) -->
+        <div class="tree-crown-wrapper" id="inicio-sorpresa">
+            
+            <div class="floating-leaf leaf-1">🍃</div>
+            <div class="floating-leaf leaf-2">🍃</div>
+            <div class="floating-leaf leaf-3">🍃</div>
+            <div class="floating-leaf leaf-4">🍃</div>
+            
+            <svg class="crown-svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMax slice">
+                
+                <!-- Ramas internas (Solo visibles entre las hojas, NUNCA tocan la base inferior) -->
+                <path d="M 800,800 Q 500,600 250,450" stroke="#4a2021" stroke-width="80" stroke-linecap="round" fill="none"/>
+                <path d="M 800,800 Q 1100,600 1350,450" stroke="#4a2021" stroke-width="80" stroke-linecap="round" fill="none"/>
+                <path d="M 800,800 L 800,300" stroke="#4a2021" stroke-width="100" stroke-linecap="round" fill="none"/>
+
+                <!-- Follaje masivo: La curva inferior baja hasta Y=1150 para tragar el tronco -->
+                <!-- Capa 1: Sombra base -->
+                <path d="M 800,1150 C 400,1150 100,950 150,600 C 50,400 150,150 400,150 C 600,50 1000,50 1200,150 C 1450,150 1550,400 1450,600 C 1500,950 1200,1150 800,1150 Z" fill="#174706"/>
+                
+                <!-- Capa 2: Verdes oscuros -->
+                <path d="M 800,1050 C 450,1050 200,850 250,550 C 150,350 300,200 500,150 C 700,50 900,50 1100,150 C 1300,200 1450,350 1350,550 C 1400,850 1150,1050 800,1050 Z" fill="#1f6904"/>
+                
+                <!-- Capa 3: Verdes vivos -->
+                <circle cx="450" cy="450" r="280" fill="#2b8a09"/>
+                <circle cx="1150" cy="450" r="280" fill="#2b8a09"/>
+                <circle cx="800" cy="300" r="320" fill="#2b8a09"/>
+                <circle cx="350" cy="700" r="220" fill="#2b8a09"/>
+                <circle cx="1250" cy="700" r="220" fill="#2b8a09"/>
+                <circle cx="800" cy="780" r="280" fill="#2b8a09"/>
+
+                <!-- Capa 4: Brillos frontales -->
+                <circle cx="500" cy="400" r="200" fill="#389e0d"/>
+                <circle cx="1100" cy="400" r="200" fill="#389e0d"/>
+                <circle cx="800" cy="250" r="250" fill="#389e0d"/>
+                <circle cx="400" cy="650" r="160" fill="#389e0d"/>
+                <circle cx="1200" cy="650" r="160" fill="#389e0d"/>
+
+                <!-- Capa 5: Destellos finales -->
+                <circle cx="550" cy="320" r="140" fill="#52c41a" opacity="0.85"/>
+                <circle cx="1050" cy="320" r="140" fill="#52c41a" opacity="0.85"/>
+                <circle cx="800" cy="200" r="160" fill="#52c41a" opacity="0.85"/>
+            </svg>
+
+            <div class="crown-ui">
+                <p class="eyebrow" style="color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.9); letter-spacing: 0.15em;">Tengo algo para ti...</p>
+                <h1 class="title" style="color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.8); font-size: clamp(2.4rem, 8vw, 4rem); margin-bottom: 25px;">Una pequeña sorpresa</h1>
+                <button class="gift-box" id="surpriseButton">
+                    <span class="gift-box__icon">🎁</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. EL TRONCO -->
+        <div class="tree-trunk-wrapper">
+            <div class="trunk-text-container">
+                <p class="romantic-text">
+                    Qué tanto se puede disfrutar de la naturaleza y, a la vez, usarla como referencia... bueno, bastante, supongo yo. ¿Sabías que muchos árboles, de alguna manera, guardan las memorias de las personas que los plantaron o que los vieron crecer? Suena curioso, pero es hermoso pensar que algunos llevan siglos en su interior, guardando el paso del tiempo, las vivencias, los sonidos y tantos momentos que ocurrieron a su alrededor. 
+                    <br><br>
+                    Ven, amor mío. Ven y redescubre conmigo nuestras raíces, esas que hemos ido construyendo con cada recuerdo que hemos plantado juntos a lo largo del tiempo.
+                    <br><br>
+                    Te amo, mi princesa.
+
+                </p>
+            </div>
+            
+            <svg class="trunk-svg" preserveAspectRatio="none" viewBox="0 0 1000 1500">
+                <path d="M 150,0 Q 300,750 50,1500 L 950,1500 Q 700,750 850,0 Z" fill="#4a2021"/>
+                <path d="M 250,0 Q 350,750 180,1500" stroke="#2e1112" stroke-width="12" fill="none" opacity="0.6"/>
+                <path d="M 450,50 Q 500,800 400,1400" stroke="#2e1112" stroke-width="15" fill="none" opacity="0.5"/>
+                <path d="M 650,0 Q 600,700 750,1500" stroke="#2e1112" stroke-width="10" fill="none" opacity="0.6"/>
+                <path d="M 750,100 Q 700,600 850,1400" stroke="#2e1112" stroke-width="8" fill="none" opacity="0.4"/>
+                <ellipse cx="320" cy="400" rx="18" ry="50" stroke="#2e1112" stroke-width="6" fill="none" opacity="0.7"/>
+                <ellipse cx="650" cy="1100" rx="22" ry="60" stroke="#2e1112" stroke-width="8" fill="none" opacity="0.7"/>
+            </svg>
+        </div>
+
+        <!-- 3. LAS RAÍCES Y EL ÁLBUM -->
+        <div class="ground-section" id="roots-section">
+            <svg class="grass-transition" viewBox="0 0 1200 150" preserveAspectRatio="none">
+                <path d="M0,60 Q300,10 600,50 T1200,30 L1200,150 L0,150 Z" fill="#389e0d" />
+                <path d="M0,90 Q400,130 800,70 T1200,80 L1200,150 L0,150 Z" fill="#2b8a09" />
+                <path d="M0,120 Q300,90 600,120 T1200,110 L1200,150 L0,150 Z" fill="#1f6904" />
+            </svg>
+            
+            <div class="album-container">
+                <div class="responsive-gallery" id="galleryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal y Notificación -->
+    <div class="special-overlay" id="imageModal">
+        <div class="special-card polaroid-modal">
+            <!-- Agregamos el video aquí, ambos inician ocultos (display: none) -->
+            <img id="modalImage" src="" alt="Sorpresa" style="display: none;">
+            <video id="modalVideo" src="" controls style="display: none; width: 100%; border-radius: 2px;"></video>
+            
+            <p class="special-card__text" id="modalText" style="margin-top: 15px; font-weight: 500;"></p>
+            <button class="special-card__close" id="closeModalBtn">Guardar recuerdo</button>
+        </div>
+    </div>
+
+    <div class="dock-toast" id="updateToast" style="bottom: 24px; right: 24px; left: auto; transform: translateY(20px);">
+        Tienes recuerdos nuevos 📸
+    </div>
+
+    <script src="paisaje.js"></script>
+</body>
+</html>
