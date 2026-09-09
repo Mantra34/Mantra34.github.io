@@ -8,19 +8,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const recuerdos = [
         {
             tipo: 'imagen',
-            url: '/adicionales/cajasorpresa/imagenes/beauty_collage.jpeg', 
+            url: '/adicionales/cajasorpresa/exportadas/beauty_collage.jpeg', 
             texto: 'Un hermoso collage de una preciosa mujer.'
         },
         {
             tipo: 'video', // <--- ¡AQUÍ ESTÁ EL CAMBIO!
-            url: '/adicionales/cajasorpresa/imagenes/un_despertar_juntos.mp4', 
+            url: '/adicionales/cajasorpresa/exportadas/un_despertar_juntos.mp4', 
             texto: 'Un despertar juntitos, amor mío. 💖'
         },
         {
                     tipo: 'imagen',
-            url: '/adicionales/cajasorpresa/imagenes/beautifull_woman.jpeg',
+            url: '/adicionales/cajasorpresa/exportadas/beautifull_woman.jpeg',
             texto: 'Que mujer tan bella e increible 🍷'
         },
+        {
+                    tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/nosotros_gacha.jpeg',
+            texto: 'Un recuerdo de nosotros en Gacha Life. 💕'
+        },
+                {
+                    tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/epic_foto.jpeg',
+            texto: 'Que pose tan epica la tuya 🤩'
+
+        },
+                {
+                    tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/lenguita_teamo.jpeg',
+            texto: 'De nuestras primeras instantaneas. 😍'
+
+        }
+
     ];
 
     const galleryGrid = document.getElementById('galleryGrid');

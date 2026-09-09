@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden; /* Evita barras de desplazamiento */
+    font-family: 'Quicksand', sans-serif;
+}
+
+#turtleCanvas {
+    display: block;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(25, 25, 25, 0.6);
+    backdrop-filter: blur(6px);
+    color: #ffb6c1; /* El mismo rosa del texto */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-to-home:active {
+    transform: scale(0.95);
+    background: rgba(255, 182, 193, 0.2);
+}
