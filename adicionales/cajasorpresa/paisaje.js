@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             texto: 'Un hermoso collage de una preciosa mujer.'
         },
         {
-            tipo: 'video', // <--- ¡AQUÍ ESTÁ EL CAMBIO!
+            tipo: 'video', 
             url: '/adicionales/cajasorpresa/exportadas/un_despertar_juntos.mp4', 
             texto: 'Un despertar juntitos, amor mío. 💖'
         },
@@ -37,7 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
             url: '/adicionales/cajasorpresa/exportadas/lenguita_teamo.jpeg',
             texto: 'De nuestras primeras instantaneas. 😍'
 
-        }
+        },
+
+         {
+                    tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/besito_gacha.jpeg',
+            texto: 'Besito gacha JAJAJA. 😘'
+
+        },
+
+        {
+            tipo : 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/betito.jpeg',
+            texto: 'Betito, mi amor. 💖'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/but_and_leg.jpeg',
+            texto: 'Amo verte haciendo pereza. '
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/frentes.jpeg',
+            texto: 'Nuestros frentes juntos. 💕'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/hermosos.jpeg',
+            texto: 'Que hermosos somos juntos. 😍'
+        },
 
     ];
 
