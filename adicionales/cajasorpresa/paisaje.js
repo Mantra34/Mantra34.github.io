@@ -70,6 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
             texto: 'Que hermosos somos juntos. 😍'
         },
 
+
+        {   
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/tu_chiquita.jpeg',
+            texto: 'Mi amor, mi vida, mi todo. 💖'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/sleeping_girl.jpeg',
+            texto: 'Eres tan hermosa cuando duermes 😴💖'
+        },
+        
+        {
+        tipo: 'imagen',
+        url: '/adicionales/cajasorpresa/exportadas/skyfromsanantonio.jpeg',
+        texto: 'El cielo de san antonio en ese dia fue lo segundo más hermoso que he visto, lo primero eres tu 💖'
+        },
+        
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/saritahermosa.jpeg',
+            texto: 'Mi hermosa Sarita, mi amor. 💖'
+        }
     ];
 
     const galleryGrid = document.getElementById('galleryGrid');
