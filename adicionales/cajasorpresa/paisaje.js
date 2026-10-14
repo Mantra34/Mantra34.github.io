@@ -93,7 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
             tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/saritahermosa.jpeg',
             texto: 'Mi hermosa Sarita, mi amor. 💖'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/tu_ojito.jpeg',
+            texto: 'Tus ojitos son tan hermosos, mi amor. 💖'
         }
+
     ];
 
     const galleryGrid = document.getElementById('galleryGrid');
