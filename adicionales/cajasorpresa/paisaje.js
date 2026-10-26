@@ -11,22 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
             url: '/adicionales/cajasorpresa/exportadas/beauty_collage.jpeg', 
             texto: 'Un hermoso collage de una preciosa mujer.'
         },
+        
         {
             tipo: 'video', 
             url: '/adicionales/cajasorpresa/exportadas/un_despertar_juntos.mp4', 
             texto: 'Un despertar juntitos, amor mío. 💖'
         },
+        
         {
                     tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/beautifull_woman.jpeg',
             texto: 'Que mujer tan bella e increible 🍷'
         },
+        
         {
                     tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/nosotros_gacha.jpeg',
             texto: 'Un recuerdo de nosotros en Gacha Life. 💕'
         },
-                {
+        
+        {
                     tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/epic_foto.jpeg',
             texto: 'Que pose tan epica la tuya 🤩'
@@ -39,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         },
 
-         {
+        {
                     tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/besito_gacha.jpeg',
             texto: 'Besito gacha JAJAJA. 😘'
@@ -84,23 +88,64 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         
         {
-        tipo: 'imagen',
-        url: '/adicionales/cajasorpresa/exportadas/skyfromsanantonio.jpeg',
-        texto: 'El cielo de san antonio en ese dia fue lo segundo más hermoso que he visto, lo primero eres tu 💖'
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/skyfromsanantonio.jpeg',
+            texto: 'El cielo de san antonio en ese dia fue lo segundo más hermoso que he visto, lo primero eres tu 💖'
         },
         
         {
             tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/saritahermosa.jpeg',
-            texto: 'Mi hermosa Sarita, mi amor. 💖'
+            texto: 'Mi hermosa Sarita, mi amor. ❤️‍🔥'
         },
 
         {
             tipo: 'imagen',
             url: '/adicionales/cajasorpresa/exportadas/tu_ojito.jpeg',
-            texto: 'Tus ojitos son tan hermosos, mi amor. 💖'
-        }
+            texto: 'Tus ojitos son tan hermosos, mi amor. ❤️‍🩹'
+        },
 
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/meencantas.jpeg',
+            texto: 'Me encantas, mi amor. 🥰'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/sarita.jpeg',
+            texto: 'Mi hermosa Sarita, mi amor. ❤️‍🔥'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/nosotros_bien_random.jpeg',
+            texto: 'Nuestros momentos juntos son los mejores. 😜'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/tu_florecitas.jpeg',
+            texto: 'Tus florecitas son tan hermosas, mi amor. 🌸'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/tu_hermosa.jpeg',
+            texto: 'Eres tan hermosa, mi amor. 💞'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/we_on_we.jpeg',
+            texto: 'Fuck you too bitch. 😎'
+        },
+
+        {
+            tipo: 'imagen',
+            url: '/adicionales/cajasorpresa/exportadas/we.jpeg',
+            texto: 'Nosotros, siempre juntos. 💖'
+        },
     ];
 
     const galleryGrid = document.getElementById('galleryGrid');
