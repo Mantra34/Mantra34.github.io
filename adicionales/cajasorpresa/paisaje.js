@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         {
             tipo: 'imagen',
-            url: '/adicionales/cajasorpresa/exportadas/meencantas.jpeg',
+            url: '/adicionales/cajasorpresa/exportadas/menencantas.jpeg',
             texto: 'Me encantas, mi amor. 🥰'
         },
 
